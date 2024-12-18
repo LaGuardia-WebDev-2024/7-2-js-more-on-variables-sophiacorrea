@@ -6,7 +6,9 @@ void setup() {
 //🎯Varaible Declarations Go Here
 var x = 200;
 var y = 100;
-
+var randRed = random(0,255);
+var randGreen = random(0,255);
+var randBlue = random(0,255);
 //🟢Draw Procedure - Runs on Repeat
 void draw(){
   background(255,255,255,200);
@@ -14,24 +16,42 @@ void draw(){
   //💡⬇️⬇️⬇️💡 Your Code For This Unit Goes Here
   
   noStroke();
-  fill(30, 204, 91); // a nice froggy green!
+  fill(0, 0, 0)
+  ellipse(x, y, 205, 105); //outline
+  ellipse(x-50, y-50,45, 45)
+  ellipse(x+50, y-50,45, 45)
+  fill(	193, 225, 193); // a nice froggy green!
 
   ellipse(x, y, 200, 100); // face
+  
   ellipse(x - 50, y - 50, 40, 40); // left eye socket
   ellipse(x + 50, y - 50, 40, 40); // right eye socket
+
 
   fill(255, 255, 255); // for the whites of the eyes!
   ellipse(x - 50, y - 50, 30, 30); // left eyeball
   ellipse(x + 50, y - 50, 30, 30); // right eyeball
   
+    fill(255, 209, 220); // the red for the mouth
+    ellipse(x, y, 100, 40); //mouth
+    
+    fill (0,0,0); // the black for the eyes
+    ellipse(x-50,y-50, 20, 20); //the pupils
+     ellipse(x+50,y-50, 20, 20);
+      
 
+  x = mouseX;
+y = mouseY;
+fill (randRed, randGreen, randBlue);
 }
 
 
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
-
+var randRed = random(0,255);
+var randGreen = random(0,255);
+var randBlue = random(0,255);
 var fillR = 255;
 var fillG = 0;
 var fillB = 255;
